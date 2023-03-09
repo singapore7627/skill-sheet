@@ -1,16 +1,22 @@
 <template>
   <div class="home">
-    <SkillSheet/>
+    <PageLayoutSkill>
+      <template #col-main>
+        <SkillSheet/>
+      </template>
+    </PageLayoutSkill>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import SkillSheet from '@/components/SkillSheet.vue'; // @ is an alias to /src
+import PageLayoutSkill from '@/views/utils/PageLayoutSkill.vue'
+import SkillSheet from '@/components/SkillSheet.vue';
 
 export default defineComponent({
   name: 'HomeView',
   components: {
+    PageLayoutSkill,
     SkillSheet,
   },
 });
