@@ -14,7 +14,7 @@
           </div>
         </div>
         <div class="row px-3">
-          <div class="col text-end">
+          <div class="col">
             <slot name="col-main" />
           </div>
         </div>
