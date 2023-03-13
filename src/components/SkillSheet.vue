@@ -6,59 +6,61 @@
     <div class="row mb-3">
       <div class="col text-start fs-6">
         <h3 class="mb-2 fs-6">■職務経歴</h3>
-        <div class="container-fluid">
+        <div class="w-100">
           <h4 class="fs-7 fw-bold">1 2018/06 - 2018/12 電力会社</h4>
-          <div class="row">
-            <div class="col-7 border">
-              <h5 class="fs-7 fw-bold">プロジェクトの目的・説明</h5>
-              <p>
-                経営統合に伴ったシステム改修のうち、ポータルサイトの対応を行った。
-              </p>
-            </div>
-            <div class="col-2 border">
-              <div class="row">
-                <h5 class="fs-7 fw-bold">フェーズ</h5>
+          <div class="container-fluid border">
+            <div class="row border-bottom">
+              <div class="col-6">
+                <h5 class="fs-7 fw-bold">プロジェクトの目的・説明</h5>
                 <p>
-                  開発-リリース
+                  経営統合に伴ったシステム改修のうち、ポータルサイトの対応を行った。
                 </p>
               </div>
-              <div class="row">
-                <h5 class="fs-7 fw-bold">人数</h5>
+              <div class="col-2 border-start">
+                <div class="row">
+                  <h5 class="fs-7 fw-bold">フェーズ</h5>
+                  <p>
+                    開発-リリース
+                  </p>
+                </div>
+                <div class="row">
+                  <h5 class="fs-7 fw-bold">人数</h5>
+                  <p>
+                    3-8
+                  </p>
+                </div>
+              </div>
+              <div class="col-4 border-start">
+                <h5 class="fs-7 fw-bold">技術</h5>
                 <p>
-                  3-8
+                  Java
                 </p>
               </div>
             </div>
-            <div class="col-3 border">
-              <h5 class="fs-7 fw-bold">技術</h5>
-              <p>
-                Java
-              </p>
+            <div class="row border-bottom">
+              <div class="col-8">
+                <h5 class="fs-7 fw-bold">役割</h5>
+                <p>
+                  一般的ウォーターフォール型開発に従って進めた。<br/>
+                  開発、単体テスト、結合テストを行い、チームリーダーのレビューを受け必要に応じて修正を行った。<br/>
+                  既存のコードに対して、複数ブランドに対応できるよう、アカウント情報に紐づくSQL文の変更、描画内容やメール出力内容の切り替え等を行った。<br/>
+                  WebAPIやバッチ改修等も担当した。
+                </p>
+              </div>
+              <div class="col-4 border-start">
+                <h5 class="fs-7 fw-bold">スキル</h5>
+                <p>
+                  さまざまなスキルを会得した。
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-7 border">
-              <h5 class="fs-7 fw-bold">役割</h5>
-              <p>
-                一般的ウォーターフォール型開発に従って進めた。<br/>
-                開発、単体テスト、結合テストを行い、チームリーダーのレビューを受け必要に応じて修正を行った。<br/>
-                既存のコードに対して、複数ブランドに対応できるよう、アカウント情報に紐づくSQL文の変更、描画内容やメール出力内容の切り替え等を行った。<br/>
-                WebAPIやバッチ改修等も担当した。
-              </p>
-            </div>
-            <div class="col-5 border">
-              <h5 class="fs-7 fw-bold">スキル</h5>
-              <p>
-                さまざまなスキルを会得した。
-              </p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col border">
-              <h5 class="fs-7 fw-bold">コメント</h5>
-              <p>
-                さまざまなスキルを会得した。
-              </p>
+            <div class="row">
+              <div class="col">
+                <h5 class="fs-7 fw-bold">コメント</h5>
+                <p>
+                  さまざまなスキルを会得した。
+                </p>
+              </div>
             </div>
           </div>
         </div>
