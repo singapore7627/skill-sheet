@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container-fluid overflow-hidden">
-      <div class="max-width p-3 mx-auto">
+      <div class="max-width py-3 mx-auto">
         <div class="row mb-3">
           <div class="col">
             <h1 class="my-2 fs-3">{{ title }}</h1>
