@@ -4,7 +4,7 @@
       <div class="col text-start">
         <h3 class="mb-2 fs-6 fw-bold">■{{ title }}</h3>
         <div class="w-100 mb-4" v-for="(career, index) in careers" :key="index">
-          <h4 class="fs-7 fw-bold">No.{{ index + 1 }} {{ career.period }} {{ career.projectName }}</h4>
+          <h4 class="fs-7 fw-bold">No.{{ careers.length - index }} {{ career.period }} {{ career.projectName }}</h4>
           <div class="container-fluid border border-2 border-dark mx-3">
             <div class="row border-bottom border-1">
               <div class="col-6">
