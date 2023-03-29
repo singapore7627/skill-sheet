@@ -33,7 +33,7 @@
                 </div>
               </div>
               <div class="col-4 border-start">
-                <h5 class="fs-7 fw-bold my-2">技術</h5>
+                <h5 class="fs-7 fw-bold my-2">主な技術</h5>
                 <p>
                   <template v-for="(content, index) in career.tech" :key="index">
                     {{ content }}
