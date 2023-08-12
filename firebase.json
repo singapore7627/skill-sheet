@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "skill-sheet-for-engineer",
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
