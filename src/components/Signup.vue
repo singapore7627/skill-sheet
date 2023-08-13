@@ -12,11 +12,11 @@
       <input type="password" class="form-control" id="password" v-model="state.password">
     </div>
     <div class="mb-3">
-      <button class="btn btn-primary" @click="signUp">login</button>
+      <button class="btn btn-primary" @click="signUp">signup</button>
     </div>
     <div class="mb-3">
-      <router-link to="signup" class="nav-link fw-normal">
-        アカウント作成
+      <router-link to="/" class="nav-link fw-normal">
+        ログイン
       </router-link>
     </div>
   </div>
@@ -24,7 +24,7 @@
 
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { db } from '@/firebase/config';
 import { doc, getDoc } from "firebase/firestore";
 
@@ -42,7 +42,7 @@ export default defineComponent({
 
     return { state };
   },
-  name: 'LoginComponent',
+  name: 'SignupComponent',
   mounted: async function() {
     // TODO dbを呼ばずに実行する
     const docRef = doc(db, "trashTypes", "bottles");
@@ -50,7 +50,7 @@ export default defineComponent({
   methods: {
     signUp: function () {
       const auth = getAuth();
-      signInWithEmailAndPassword(auth, this.state.email, this.state.password)
+      createUserWithEmailAndPassword(auth, this.state.email, this.state.password)
         .then((userCredential) => {
           // Signed in 
           const user = userCredential.user;
