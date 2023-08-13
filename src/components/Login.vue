@@ -12,7 +12,7 @@
       <input type="password" class="form-control" id="password" v-model="state.password">
     </div>
     <div class="mb-3">
-      <button class="btn btn-primary" @click="signUp">login</button>
+      <button class="btn btn-primary" @click="login">login</button>
     </div>
     <div class="mb-3">
       <router-link to="signup" class="nav-link fw-normal">
@@ -48,13 +48,14 @@ export default defineComponent({
     const docRef = doc(db, "trashTypes", "bottles");
   },
   methods: {
-    signUp: function () {
+    login: function () {
       const auth = getAuth();
       signInWithEmailAndPassword(auth, this.state.email, this.state.password)
         .then((userCredential) => {
           // Signed in 
           const user = userCredential.user;
           // ...
+          this.$router.push({ name: 'home', params: {} })
         })
         .catch((error) => {
           const errorCode = error.code;
