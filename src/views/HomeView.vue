@@ -1,18 +1,23 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <PageLayoutSkill title="職務経歴書" date="2023年8月11日" name="渡辺貴義">
+      <template #col-main>
+        <SkillSheet/>
+      </template>
+    </PageLayoutSkill>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import PageLayoutSkill from '@/views/utils/PageLayoutSkill.vue'
+import SkillSheet from '@/components/SkillSheet.vue';
 
 export default defineComponent({
   name: 'HomeView',
   components: {
-    HelloWorld,
+    PageLayoutSkill,
+    SkillSheet,
   },
 });
 </script>
