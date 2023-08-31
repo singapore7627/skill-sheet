@@ -4,7 +4,7 @@
     <ComponentP title="知識・技術" :contentsP="state.knowledgeContent" />
     <ComponentP title="取得資格" :contentsP="state.certificationContent" />
     <ComponentCareer title="職務経歴" :careers="state.careerContent" />
-    <ComponentP title="自己PR" :contentsP="state.prContent" />
+    <!--<ComponentP title="その他" :contentsP="state.prContent" />-->
   </div>
 </template>
 
@@ -85,6 +85,8 @@ export default defineComponent({
     state.careerContent.push(
       {
         period: "2022/04 - 2023/06",
+        companyName: "株式会社アズヴィン",
+        companyPeriod: "2020/11 - 現在",
         projectName: "新サービスリリースに向けた諸作業",
         purpose: [
           "2022年4月に立ち上げた新会社のサービスリリースに向けた活動を行った",
@@ -222,6 +224,8 @@ export default defineComponent({
     state.careerContent.push(
       {
         period: "2020/01 - 2020/09",
+        companyName: "株式会社デリバリーコンサルティング",
+        companyPeriod: "2018/04 - 2020/10",
         projectName: "警備会社管理業務支援システム Salesforce環境移行等",
         purpose: [
           "警備会社を管理するシステムにおいて、警備会社入れ替えのための調査・改修や、環境移行（Classic⇒Lightning）および追加要件の対応を行った。",

@@ -1,5 +1,5 @@
 <template>
-  <div class="login">
+  <div class="content-create">
     <div class="mb-3">
       <p v-if="state.errorMessage">{{ state.errorMessage }}</p>
     </div>
@@ -24,6 +24,7 @@
 
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';
+import ComponentP from '@/components/utils/ComponentP.vue';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { db } from '@/firebase/config';
 import { doc, getDoc } from "firebase/firestore";
@@ -31,18 +32,35 @@ import { doc, getDoc } from "firebase/firestore";
 export default defineComponent({
   setup() {
     const state = reactive<{
-        email: string,
-        password: string,
+        inputType: string[],
+        order: number,
+        content: string,
+        project: any,
         errorMessage: string
       }>({
-        email: '',
-        password: '',
+        inputType: ["summaryContent", "knowledgeContent", "certificationContent", "careerContent", "prContent"],
+        order: 1,
+        content: '',
+        project: {
+          period: "",
+          projectName: "",
+          purpose: [],
+          phase: "",
+          teamSize: "",
+          tech: [],
+          duties: [],
+          skills: [],
+          comments: [],
+        },
         errorMessage: ''
       });
 
     return { state };
   },
-  name: 'SignupComponent',
+  name: 'ContentCreate',
+  components: {
+    ComponentP,
+  },
   mounted: async function() {
     // TODO dbを呼ばずに実行する
     const docRef = doc(db, "trashTypes", "bottles");
@@ -50,7 +68,7 @@ export default defineComponent({
   methods: {
     signUp: function () {
       const auth = getAuth();
-      createUserWithEmailAndPassword(auth, this.state.email, this.state.password)
+      /* createUserWithEmailAndPassword(auth, this.state.email, this.state.password)
         .then((userCredential) => {
           // Signed in 
           const user = userCredential.user;
@@ -59,7 +77,7 @@ export default defineComponent({
         .catch((error) => {
           const errorCode = error.code;
           this.state.errorMessage = error.message;
-        });
+        });*/
     }
   }
 });
