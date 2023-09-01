@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <PageLayoutSkill title="職務経歴書" date="2023年8月29日" name="渡辺貴義">
+    <PageLayoutSkill title="職務経歴書" date="2023年9月1日" name="渡辺貴義">
       <template #col-main>
         <SkillSheet/>
       </template>

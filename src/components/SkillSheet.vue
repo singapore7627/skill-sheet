@@ -1,6 +1,7 @@
 <template>
   <div>
     <ComponentP title="職務要約" :contentsP="state.summaryContent" />
+    <ComponentP title="志望動機" :contentsP="state.reasonContent" />
     <ComponentP title="知識・技術" :contentsP="state.knowledgeContent" />
     <ComponentP title="取得資格" :contentsP="state.certificationContent" />
     <ComponentCareer title="職務経歴" :careers="state.careerContent" />
@@ -15,8 +16,9 @@ import ComponentCareer from '@/components/utils/ComponentCareer.vue';
 
 export default defineComponent({
   setup() {
-    const state = reactive<{ summaryContent: string[][], knowledgeContent: string[][], certificationContent: string[][], careerContent: object[], prContent: string[][] }>({
+    const state = reactive<{ summaryContent: string[][], reasonContent: string[][], knowledgeContent: string[][], certificationContent: string[][], careerContent: object[], prContent: string[][] }>({
       summaryContent: [],
+      reasonContent: [],
       knowledgeContent: [],
       certificationContent: [],
       careerContent: [],
@@ -25,7 +27,7 @@ export default defineComponent({
 
     state.summaryContent.push([
       "2018年、明治大学商学部を卒業後、3か月の研修を経て最初のプロジェクトに参画。",
-      "研修での知識を活かし同時期に参画した先輩と同等の立場でチームとして活動。JavaやMVC等Webアプリ開発の基礎知識を定着させる。",
+      "研修での知識を活かし同時期に参画した先輩と同等の立場でチームとして活動。PMI案件でJavaやMVC等Webアプリ開発の基礎知識を定着させる。",
       "その後、並行して動いていた保守プロジェクトのメンバー退職に伴い、玉突きで保守プロジェクトに移動。",
     ]);
     state.summaryContent.push([
@@ -35,6 +37,11 @@ export default defineComponent({
     state.summaryContent.push([
       "2020年11月以後、転職をきっかけに小規模案件への対応が増える。",
       "2022年4月頃から、別会社での新規サービスの立ち上げに係るHPやWeb管理システムの初期構築段階から主体的に携わる。",
+    ]);
+    state.reasonContent.push([
+      "私が貴社を志望した理由は、業務改革やIT関連部分の方針決定段階から、課題を見出し、解決に導けると考えたからです。",
+      "エンジニアとして、方針が決まった中で技術的にどのように実現するのかを経験してきました。また、直近のプロジェクトである新サービスリリースについてもエンジニアとしての職責の範囲で経営との調整を担ってきましたが、より純粋に経営課題解決の支援を行っていきたいとの思いを感じるようになりました。",
+      "この経験から、特に貴社では銀行基盤というより顧客との継続的な関係が重視される状況で支援ができるという環境で、長期的には微力ながらも日本の役に立つ仕事をしたいと考え志望します。"
     ]);
     state.knowledgeContent.push([
       "【Java】",
